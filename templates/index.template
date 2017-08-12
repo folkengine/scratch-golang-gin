@@ -1,7 +1,7 @@
 <!--index.template-->
 
 <!--Embed the header.html template at this location-->
-{{ template "header.html" .}}
+{{ template "header.template" .}}
 
 <h1>Hello Gin!</h1>
 

@@ -29,3 +29,5 @@ $> glide get github.com/gin-gonic/gin
 Note that I'm using the .template extension for templates instead of .html. 
 Using html extension for something that isn't a working html page just feels wrong to
 this ol' web dev.
+
+## Create our first test
