@@ -31,3 +31,32 @@ Using html extension for something that isn't a working html page just feels wro
 this ol' web dev.
 
 ## Create our first test
+
+We begin by creating a simple test that just shows us that we are able to set Gin into Test Mode, 
+create a router, and run a test from the command line.
+
+```
+$> go test
+PASS
+ok  	github.com/folkengine/scratch-golang-gin	0.438s
+```
+
+## Add goconvey
+
+We're going to us [goconvey](https://github.com/smartystreets/goconvey) to our project so we can 
+test drive our code.
+
+```
+$> glide get github.com/smartystreets/goconvey
+```
+
+We also need to install the binary onto our system, and run it:
+
+```
+$> go get -t github.com/smartystreets/goconvey
+$> GOPATH/bin/goconvey
+```
+
+Your browser should now open up, and showing you your initial passing test:
+
+![Goconvet Startup](static/images/goconvey1.png "Goconvet Startup")
