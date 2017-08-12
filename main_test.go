@@ -14,30 +14,11 @@ func TestMain(m *testing.M) {
 	os.Exit(m.Run())
 }
 
-
-
 // \\ // \\ // \\ // \\ // \\ // \\ // \\ // \\ // \\ // \\
 // Helper Functions
 
-func getRouter(withTemplates bool) *gin.Engine {
-	r := gin.Default()
-	if withTemplates {
-		r.LoadHTMLGlob("templates/*")
-	}
-	r.GET("/", func(c *gin.Context) {
-		c.HTML(
-			http.StatusOK,
-			"index.template",
-			gin.H{
-				"title": "Home Page",
-			},
-		)
-	})
-	return r
-}
-
 func TestIndex(t *testing.T) {
-	r := getRouter(true)
+	r := Router()
 	if r == nil {
 		t.Fail()
 	}
