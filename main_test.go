@@ -2,8 +2,11 @@ package main
 
 import (
 	"testing"
-	"github.com/gin-gonic/gin"
+	"net/http"
+	"net/http/httptest"
 	"os"
+	"github.com/gin-gonic/gin"
+	. "github.com/smartystreets/goconvey/convey"
 )
 
 func TestMain(m *testing.M) {
@@ -11,11 +14,25 @@ func TestMain(m *testing.M) {
 	os.Exit(m.Run())
 }
 
+
+
+// \\ // \\ // \\ // \\ // \\ // \\ // \\ // \\ // \\ // \\
+// Helper Functions
+
 func getRouter(withTemplates bool) *gin.Engine {
 	r := gin.Default()
 	if withTemplates {
 		r.LoadHTMLGlob("templates/*")
 	}
+	r.GET("/", func(c *gin.Context) {
+		c.HTML(
+			http.StatusOK,
+			"index.template",
+			gin.H{
+				"title": "Home Page",
+			},
+		)
+	})
 	return r
 }
 
@@ -24,4 +41,13 @@ func TestIndex(t *testing.T) {
 	if r == nil {
 		t.Fail()
 	}
+	Convey("Given that I go to the index page", t, func() {
+		req, _ := http.NewRequest("GET", "/", nil)
+		Convey("it should return a 200 status code", func() {
+			resp := httptest.NewRecorder()
+			r.ServeHTTP(resp, req)
+			So(resp.Code, ShouldEqual, http.StatusOK)
+		})
+	})
+
 }
