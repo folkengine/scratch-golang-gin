@@ -1,5 +1,8 @@
 # Step by Step Guide 
 
+This is a step by step guide to me working through Kulshekhar Kabra's [Building Go Web Applications and Microservices Using Gin
+](https://semaphoreci.com/community/tutorials/building-go-web-applications-and-microservices-using-gin) tutorial.
+
 ## Adding Gogland to .gitignore
 
 I've been a big fan of Jetbrain's [Gogland IDE](https://www.jetbrains.com/go/). 
@@ -20,3 +23,9 @@ $> glide init
 ```
 $> glide get github.com/gin-gonic/gin
 ```
+
+## Create the Templates
+
+Note that I'm using the .template extension for templates instead of .html. 
+Using html extension for something that isn't a working html page just feels wrong to
+this ol' web dev.
