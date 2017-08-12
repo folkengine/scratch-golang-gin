@@ -19,9 +19,6 @@ func TestMain(m *testing.M) {
 
 func TestIndex(t *testing.T) {
 	r := Router()
-	if r == nil {
-		t.Fail()
-	}
 	Convey("Given that I go to the index page", t, func() {
 		req, _ := http.NewRequest("GET", "/", nil)
 		Convey("it should return a 200 status code", func() {
