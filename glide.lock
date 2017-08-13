@@ -1,5 +1,5 @@
-hash: 1cce96795edf86aa4b0f31992d6c723d1b3cff7f5fec3f18a18b156ca551811b
-updated: 2017-08-12T15:56:57.795381922-04:00
+hash: 53474cd2f89b2801106ee948991d79887cd564978cd993679befc801666653f9
+updated: 2017-08-13T10:51:20.984197406-04:00
 imports:
 - name: github.com/gin-contrib/sse
   version: 22d885f9ecc78bf4ee5d72b937e4bbcdc58e8cae
@@ -14,8 +14,6 @@ imports:
   - proto
 - name: github.com/mattn/go-isatty
   version: fc9e8d8ef48496124e79ae0df75490096eccf6fe
-- name: github.com/smartystreets/goconvey
-  version: d4c757aa9afd1e2fc1832aaab209b5794eb336e1
 - name: github.com/ugorji/go
   version: 5efa3251c7f7d05e5d9704a69a984ec9f1386a40
   subpackages:
@@ -28,4 +26,32 @@ imports:
   version: 5f1438d3fca68893a817e4a66806cea46a9e4ebf
 - name: gopkg.in/yaml.v2
   version: cd8b52f8269e0feb286dfeef29f8fe4d5b397e0b
-testImports: []
+testImports:
+- name: github.com/andybalholm/cascadia
+  version: 349dd0209470eabd9514242c688c403c0926d266
+- name: github.com/gopherjs/gopherjs
+  version: 2b1d432c8a82c9bff0b0baffaeb3ec6e92974112
+  subpackages:
+  - js
+- name: github.com/jtolds/gls
+  version: 77f18212c9c7edc9bd6a33d383a7b545ce62f064
+- name: github.com/PuerkitoBio/goquery
+  version: e1271ee34c6a305e38566ecd27ae374944907ee9
+- name: github.com/smartystreets/assertions
+  version: 1540c14c9f1bd1abeba90f29762a4c6e50582303
+  subpackages:
+  - internal/go-render/render
+  - internal/oglematchers
+- name: github.com/smartystreets/goconvey
+  version: d4c757aa9afd1e2fc1832aaab209b5794eb336e1
+  subpackages:
+  - convey
+  - convey/gotest
+  - convey/reporting
+- name: github.com/smartystreets/logging
+  version: ac3a674540761aa0b4382094ba4795f917e85c7f
+- name: golang.org/x/net
+  version: 1c05540f6879653db88113bc4a2b70aec4bd491f
+  subpackages:
+  - html
+  - html/atom
