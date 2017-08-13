@@ -1,12 +1,12 @@
 package main
 
 import (
-	"github.com/gin-gonic/gin"
+	_ "github.com/gin-gonic/gin"
+	_ "github.com/drone/drone/router"
 )
 
-var router *gin.Engine
-
 func main() {
-	router = Router()
+	router := Router()
+	initializeRoutes(router)
 	router.Run()
 }

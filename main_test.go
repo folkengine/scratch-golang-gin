@@ -9,23 +9,25 @@ import (
 	. "github.com/smartystreets/goconvey/convey"
 )
 
+var router *gin.Engine
+
 func TestMain(m *testing.M) {
+	router = Router()
+	initializeRoutes(router)
 	gin.SetMode(gin.TestMode)
 	os.Exit(m.Run())
 }
 
-// \\ // \\ // \\ // \\ // \\ // \\ // \\ // \\ // \\ // \\
-// Helper Functions
-
 func TestIndex(t *testing.T) {
-	r := Router()
 	Convey("Given that I go to the index page", t, func() {
 		req, _ := http.NewRequest("GET", "/", nil)
 		Convey("it should return a 200 status code", func() {
 			resp := httptest.NewRecorder()
-			r.ServeHTTP(resp, req)
+			router.ServeHTTP(resp, req)
 			So(resp.Code, ShouldEqual, http.StatusOK)
 		})
 	})
-
 }
+
+// \\ // \\ // \\ // \\ // \\ // \\ // \\ // \\ // \\ // \\
+// Helper Functions
