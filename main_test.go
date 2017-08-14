@@ -8,8 +8,8 @@ import (
 	"strings"
 	"testing"
 	"github.com/gin-gonic/gin"
-	. "github.com/smartystreets/goconvey/convey"
 	"github.com/PuerkitoBio/goquery"
+	. "github.com/smartystreets/goconvey/convey"
 )
 
 var router *gin.Engine
