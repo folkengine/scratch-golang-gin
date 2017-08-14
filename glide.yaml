@@ -2,8 +2,8 @@ package: github.com/folkengine/scratch-golang-gin
 import:
 - package: github.com/gin-gonic/gin
   version: ^1.2.0
-- package: gopkg.in/validator.v2
 testImport:
+- package: gopkg.in/validator.v2
 - package: github.com/PuerkitoBio/goquery
   version: ^1.1.0
 - package: github.com/smartystreets/goconvey
