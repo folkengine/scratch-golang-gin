@@ -5,6 +5,7 @@ import (
 	"net/http"
 )
 
+// Router returns a Gin Engine Router loaded with the templates.
 func Router() *gin.Engine {
 	router := gin.Default()
 	router.LoadHTMLGlob("templates/*")
