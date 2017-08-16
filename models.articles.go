@@ -2,8 +2,8 @@ package main
 
 type article struct {
 	ID	int `json:"id"`
-	Title string `json:"title"`
-	Content string `json"content"`
+	Title string `json:"title" validate:"nonzero"`
+	Content string `json"content" validate:"nonzero"`
 }
 
 var articleList = []article {
